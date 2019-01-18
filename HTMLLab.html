@@ -3,84 +3,133 @@
 <!doctype html>
 <html>
     <head>
+
+        <style>
+            .format1 {
+                background-color: tomato;
+                color: white;
+                padding: 10px;
+            } 
+
+            .format2 {
+                background-color: pink;
+                color: black;
+                padding: 10px;
+            } 
+            .format3 {
+                background-color: orange;
+                color: purple;
+                padding: 10px;
+            } 
+            .format4 {
+                background-color: #ff3333;
+                color: white;
+                padding: 20px;
+            } 
+            .text-format {
+                color: #ff8080
+
+            } 
+        </style>
+
+
         <Title> Ubermelon Order Form </Title>
     </head>
 
-    <body>
+    <body class="format4">
         <h1> Order! </h1>
 
-        <h2> Prices </h2>
+        <h2 class="text-format"> Prices </h2>
 
-        <table>
-            <tr>
-                <th>Melon Name </th>
-                <th>Price per Pound </th>
-            </tr>
-            <tr>
-                <td>Watermelon</td>
-                <td>$1.59</td>
-            </tr>
-            <tr>
-                <td>Honeydew</td>
-                <td>$0.99</td>
-            </tr>
-            <tr>
-                <td>Canteloupe</td>
-                <td>$1.29</td>
-            </tr>
-            <tr>
-                <td>Crenshaw</td>
-                <td>$2.19</td>
-            </tr>
-            <tr>
-                <td>Canary</td>
-                <td>$11.99</td>
-            </tr>
-        </table>
-        <form>
+        <div>
+            <table class="format1">
+                <tr>
+                    <th>Melon Name </th>
+                    <th>Price per Pound </th>
+                </tr>
+                <tr>
+                    <td>Watermelon</td>
+                    <td>$1.59</td>
+                </tr>
+                <tr>
+                    <td>Honeydew</td>
+                    <td>$0.99</td>
+                </tr>
+                <tr>
+                    <td>Canteloupe</td>
+                    <td>$1.29</td>
+                </tr>
+                <tr>
+                    <td>Crenshaw</td>
+                    <td>$2.19</td>
+                </tr>
+                <tr>
+                    <td>Canary</td>
+                    <td>$11.99</td>
+                </tr>
+            </table>
+        </div>
 
-            <p> Place your order here! You know you want to.</p>
+        <br><br>
+
+        <div>
+
+            <form action="https://ubermelon-order-form.herokuapp.com/process" methon="POST" class="format2">
+
+                <p> Place your order here! You know you want to.</p>
+
+                
+                First Name: <input type="text" name="firstname"><br>
+
+                Last Name: <input type="text" name="lastname"><br>
+                
+
+                Melon Type:
+                    <select name="melontype">
+                        <option value ="Watermelon">Watermelon</option>
+                        <option value ="Honeydew">Honeydew</option>
+                        <option value ="Canteloupe">Canteloupe</option>
+                        <option value ="Crenshaw">Crenshaw</option>
+                        <option value ="Canary">Canary</option>
+                    </select><br>
+
+                Quantity*:<input type="text" name="Quantityr"><br>
+
+                Delivery Time
+                    <input type="radio" name="delivery-time" value="am"> 12:00am-12:00pm
+                    <input type="radio" name="delivery-time" value="pm"> 12:00am-12:00pm
+                    <input type="radio" name="delivery-time" value="xm"> Time is an illusion 
+                    <br>
+
+
+                Returning Customer?
+                    <input type="radio" name="yes"> Yes
+                    <input type="radio" name="no"> No
+                    <br>
+
+                For Statistical Purposes :
+                    <input type="checkbox" name="animal" value="dog"> Dog
+                    <input type="checkbox" name="animal" value="cat"> Cat
+                    <input type="checkbox" name="animal" value="hedgehog"> Hedgehog
+                    <input type="checkbox" name="animal" value="balloonicorn"> Balloonicorn
+                    <input type="checkbox" name="animal" value="yak"> Yak
+                    <br>
+
+                <input type="submit"><br>
+
+                
+
             
-            First Name: <input type="text" name="firstname"><br>
-
-            Last Name: <input type="text" name="lastname"><br>
-
-            Melon Type:
-                <select name="melontype">
-                    <option value ="Watermelon">Watermelon</option>
-                    <option value ="Honeydew">Honeydew</option>
-                    <option value ="Canteloupe">Canteloupe</option>
-                    <option value ="Crenshaw">Crenshaw</option>
-                    <option value ="Canary">Canary</option>
-                </select><br>
-
-            Quantity*:<input type="text" name="Quantityr"><br>
-
-            Delivery Time
-                <input type="radio" name="delivery-time" value="am"> 12:00am-12:00pm
-                <input type="radio" name="delivery-time" value="pm"> 12:00am-12:00pm
-                <input type="radio" name="delivery-time" value="xm"> Time is an illusion 
-                <br>
 
 
-            Returning Customer?
-                <input type="radio" name="yes"> Yes
-                <input type="radio" name="no"> No
-                <br>
+            </form>
 
-            For Statistical Purposes :
-                <input type="checkbox" name="animal" value="dog"> Dog
-                <input type="checkbox" name="animal" value="cat"> Cat
-                <input type="checkbox" name="animal" value="hedgehog"> Hedgehog
-                <input type="checkbox" name="animal" value="balloonicorn"> Balloonicorn
-                <input type="checkbox" name="animal" value="yak"> Yak
-                <br>
+        </div>
 
-            <input type="submit"><br>
-            *Quantities given are by the flat.
+        <div class="format3">
+                *Quantities given are by the flat.
+        </div>
 
-
-        </form>
 
     </body>
 
